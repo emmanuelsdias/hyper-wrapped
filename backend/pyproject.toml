@@ -2,6 +2,7 @@
 name = "hyper-wrapped-back"
 version = "0.1.0"
 description = "Hyper-wrapped backend application"
+authors = ["Emmanuel"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
