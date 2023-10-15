@@ -1,0 +1,20 @@
+:root {
+  /* Purple Color Palette */
+  --PURPLE-1 : #ECEBFF;
+  --PURPLE-2 : #7055fd;
+  --PURPLE-3 : #582CF4;
+  --PURPLE-4 : #3f1db3;
+
+  /* Grey Color Palette */
+  --WHITE  : #FFFFFF;
+  --GREY-1 : #f9fafb;
+  --GREY-2 : #c7d1d8;
+  --GREY-3 : #98a2b3;
+  --GREY-4 : #475467;
+  --BLACK  : #1f1f1f;
+  
+  /* Highlight Color Palette */
+  --HIGHLIGHT-1 : #7270EF;
+  --HIGHLIGHT-2 : #DA3699;
+  --HIGHLIGHT-3 : #47C88C;
+}
