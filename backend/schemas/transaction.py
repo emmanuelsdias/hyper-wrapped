@@ -20,7 +20,7 @@ class TransactionBase(BaseModel):
     is_fraud: Literal['Yes', 'No']
 
 
-class Transaction(TransactionBase):
+class TransactionSchema(TransactionBase):
     transaction_id: int
 
     class Config:

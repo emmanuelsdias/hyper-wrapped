@@ -13,7 +13,7 @@ class UserCreate(UserBase):
     pass
 
 
-class User(UserCreate):
+class UserSchema(UserCreate):
     user_id: int
 
     class Config:

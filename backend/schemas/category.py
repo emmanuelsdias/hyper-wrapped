@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class Category(BaseModel):
+class CategorySchema(BaseModel):
     mcc: int
     category_description: str
 
