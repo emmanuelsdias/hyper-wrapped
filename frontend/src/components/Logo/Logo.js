@@ -1,7 +1,9 @@
 import React from 'react';
 
-import logoSymbol from '../images/double_symbol.svg';
-import logoWordmark from '../images/wordmark.svg';
+import logoSymbol from '../../images/double_symbol.svg';
+import logoWordmark from '../../images/wordmark.svg';
+
+import './style.css'
 
 function Logo({ noWordmark = false }) {
   return (

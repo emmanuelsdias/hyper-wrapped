@@ -1,0 +1,16 @@
+.logo {
+  height          : 24px;
+  margin          : 10px;
+  display         : flex;
+  gap             : 12px;
+  align-items     : flex-start;
+  justify-content : center;
+}
+
+.logo-symbol{
+  height : 80%;
+}
+
+.logo-wordmark {
+  height : 100%;
+}

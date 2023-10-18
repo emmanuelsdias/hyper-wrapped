@@ -1,0 +1,26 @@
+@import '../../styles/fonts.css';
+@import '../../styles/themes.css';
+
+.pagination {
+  /* display: grid; */
+  /* text-align: center; */
+  /* flex-direction: column; */
+  /* align-items: center; */display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-no span {
+  color       : var(--BLACK);
+  font-family : 'Gellix';
+  font-weight : 600;
+}
+
+svg { 
+  color : var(--PURPLE-3)
+}
+
+a svg:hover {
+  color : var(--PURPLE-4);
+}

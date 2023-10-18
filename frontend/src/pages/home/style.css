@@ -1,0 +1,54 @@
+@import '../../styles/fonts.css';
+@import '../../styles/themes.css';
+
+/* HOME PAGE */
+
+#home-page {
+  margin          : 0 auto;
+  max-width       : 1000px;
+  height          : 100%;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+}
+
+#home-page .logo,
+#home-page .text-container,
+#home-page .button-container {
+  margin : 20px;
+}
+
+#home-page p {
+  font-family : 'Gellix';
+  font-weight : 600;
+  font-size   : 30px;
+  text-align  : left;
+}
+
+.attention {
+  color : var(--PURPLE-3);
+}
+
+@media (min-width: 600px) {
+  #home-page p {
+    font-size : 60px;
+  }
+}
+
+#home-page button {
+  height        : 50px;
+  width         : 100%;
+  border-radius : 5px;
+  background    : var(--PURPLE-3);
+  border        : none;
+  color         : var(--WHITE);
+  font-family   : 'Gellix';
+  font-weight   : 500;
+  font-size     : 20px;
+  cursor        : pointer;
+  transition    : all 0.4s ease;
+}
+
+#home-page button:hover {
+  background    : var(--PURPLE-4);
+}

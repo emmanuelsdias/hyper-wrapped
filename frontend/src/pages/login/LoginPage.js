@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
-import logoSymbol from '../images/double_symbol.svg';
-import sadRobot from '../images/sad_robot.jpg';
-import { login } from '../store';
-import { loginWithUsername } from '../api/loginWithUsername';
-
+import './style.css'
+import logoSymbol from '../../images/double_symbol.svg';
+import sadRobot from '../../images/sad_robot.jpg';
+import { login } from '../../store';
+import { loginWithUsername } from '../../api/loginWithUsername';
 
 function HomePage() {
   const [isLoginSelected, setIsLoginSelected] = useState(true);
