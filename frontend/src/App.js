@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/home/HomePage';
 import LoginPage from './pages/login/LoginPage';
-import CategoriesPage from './pages//wrapped/CategoriesPage';
-import MonthlyOverviewPage from './pages//wrapped/MonthlyOverviewPage';
+import CategoriesPage from './pages/wrapped/CategoriesPage';
+import MonthlyOverviewPage from './pages/wrapped/MonthlyOverviewPage';
+import DailyAverageOverviewPage from './pages/wrapped/DailyAverageOverviewPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/wrapped" element={<CategoriesPage />} />
         <Route path="/wrapped/categories" element={<CategoriesPage />} />
         <Route path="/wrapped/monthly-overview" element={<MonthlyOverviewPage />} />
+        <Route path="/wrapped/daily-average-overview" element={<DailyAverageOverviewPage />} />
       </Routes>
     </Router>
   );

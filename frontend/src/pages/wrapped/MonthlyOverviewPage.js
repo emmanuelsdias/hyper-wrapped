@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
 import './style.css'
-import Logo from '../../components/Logo/Logo'
-import FadeIn from '../../components/Animations/FadeIn'
-import FadeInAndOut from '../../components/Animations/FadeInAndOut'
+import Logo from '../../components/Logo/Logo';
+import FadeIn from '../../components/Animations/FadeIn';
+import FadeInAndOut from '../../components/Animations/FadeInAndOut';
 import BarChart from '../../components/Data/BarChart';
 import Pagination from '../../components/Pagination/Pagination'
 import { getMonthlyOverview } from '../../api/getMonthlyOverview';
@@ -24,6 +24,7 @@ const months = [
   'November', 
   'December'
 ];
+const labelMonths = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
 
 function MonthlyOverviewPage() {
   const currentYear = useSelector((state) => state.currentYear);
@@ -73,18 +74,18 @@ function MonthlyOverviewPage() {
           } />
           <br />
           <FadeInAndOut delay={3.5} waitBetween={1.5} children={
-            <p>The month you spent less was <span className='minimum'>{minMonth}.</span></p>
+            <p>The month you spent less was <span className='minimum'>{minMonth}</span>.</p>
           } />
         </div>
         <FadeIn delay={6} expand={true} children={
-          <BarChart delay={6} data={monthlyData} />
+          <BarChart xLabel={labelMonths} delay={6} data={monthlyData} />
         } />
       </div>
       <Pagination
         index={2}
-        total={2}
+        total={3}
         prev='/wrapped/categories'
-        next=''
+        next='/wrapped/daily-average-overview'
       />
     </div>
   );

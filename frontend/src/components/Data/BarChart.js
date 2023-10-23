@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-const months = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
-
-function BarChart({ data, delay = 0, xLabel = months }) {
+function BarChart({ data, xLabel, delay = 0, gap = 6, gradual = false, rotate = false }) {
   const svgRef = useRef();
   const dataWithLabels = d3.zip(data, xLabel);
 
@@ -21,7 +19,6 @@ function BarChart({ data, delay = 0, xLabel = months }) {
     // Define width, scale and gaps
     const barWidth = width / data.length;
     const scale = (height - 30) / maxDataValue;
-    const gap = 6;
 
     // Create the bar chart with height proportional to d[0]
     svg.selectAll("rect")
@@ -36,9 +33,11 @@ function BarChart({ data, delay = 0, xLabel = months }) {
                                   ? "bar maximum"
                                   : i === minIndex
                                     ? "bar minimum"
-                                    : "bar"))
+                                    : i % 2 === 0 
+                                      ? "bar even"
+                                      : "bar odd"))
       .transition()
-      .delay(delay * 1000)
+      .delay(gradual ? (d, i) => delay * 1000 + i*20 : delay * 1000)
       .duration(1000)
       .attr("y", (d) => height - d[0] * scale)
       .attr("height", (d) => d[0] * scale);
@@ -49,17 +48,20 @@ function BarChart({ data, delay = 0, xLabel = months }) {
       .enter()
       .append("text")
       .text((d) => d[0])
-      .attr("x", (d, i) => i * barWidth + barWidth / 2)
+      .attr("x", (d, i) => i * barWidth + (rotate ? ( barWidth / 8) : (barWidth / 2)))
       .attr("y", (d) => height - d[0] * scale - 5)
-      .attr("text-anchor", "middle")
+      .attr("transform", rotate ? (d, i) => `rotate(+90, ${i * barWidth + barWidth / 8}, ${height - d[0] * scale - 5})` : '')
+      .attr("text-anchor", rotate ? "end" : "middle")
       .attr("class", (d, i) => (i === maxIndex
-        ? "bar-text-top maximum"
-        : i === minIndex
-          ? "bar-text-top minimum"
-          : "bar-text-top"))
+                                  ? "bar-text-top maximum"
+                                  : i === minIndex
+                                    ? "bar-text-top minimum"
+                                    : i % 2 === 0 
+                                      ? "bar-text-top even"
+                                      : "bar-text-top odd"))
       .style("opacity", 0)
       .transition()
-      .delay(delay * 1000 + 1000)
+      .delay(gradual ? (d, i) => delay * 1000 + 1000 + i*20 : delay * 1000 + 1000)
       .duration(200)
       .style("opacity", 1);
 

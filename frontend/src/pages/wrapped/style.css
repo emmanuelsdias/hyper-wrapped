@@ -50,40 +50,57 @@
 
 /* MONTHLY OVERVIEW PAGE */
 
-#monthly-overview-page p {
+#monthly-overview-page p,
+#daily-average-overview-page p {
   font-family : 'Gellix';
   font-size   : 32px;
   font-weight : 600;
 }
 
 #monthly-overview-page .bar-text-top,
-#monthly-overview-page .bar-text-bottom {
+#monthly-overview-page .bar-text-bottom,
+#daily-average-overview-page .bar-text-top,
+#daily-average-overview-page .bar-text-bottom {
   font-family : 'Gellix';
   font-size   : 12px;
 }
 
 @media (min-width: 600px) {
   #monthly-overview-page .bar-text-top,
-  #monthly-overview-page .bar-text-bottom {
+  #monthly-overview-page .bar-text-bottom,
+  #daily-average-overview-page .bar-text-top,
+  #daily-average-overview-page .bar-text-bottom {
     font-size : 24px;
   }
 }
 
-#monthly-overview-page .bar-text-bottom {
+#monthly-overview-page .bar-text-bottom,
+#daily-average-overview-page .bar-text-bottom {
   fill : var(--WHITE);
 }
 
-#monthly-overview-page .bar-text-top,
-#monthly-overview-page .bar {
+#monthly-overview-page .bar-text-top.even,
+#monthly-overview-page .bar.even,
+#daily-average-overview-page .bar-text-top.even,
+#daily-average-overview-page .bar.even {
   fill : var(--PURPLE-4);
 }
 
-#monthly-overview-page .maximum {
+#monthly-overview-page .bar-text-top.odd,
+#monthly-overview-page .bar.odd,
+#daily-average-overview-page .bar-text-top.odd,
+#daily-average-overview-page .bar.odd {
+  fill : var(--PURPLE-3);
+}
+
+#monthly-overview-page .maximum,
+#daily-average-overview-page .maximum {
   fill  : var(--HIGHLIGHT-3);
   color : var(--HIGHLIGHT-3);
 }
 
-#monthly-overview-page .minimum {
+#monthly-overview-page .minimum,
+#daily-average-overview-page .minimum {
   fill  : var(--HIGHLIGHT-2);
   color : var(--HIGHLIGHT-2);
 }

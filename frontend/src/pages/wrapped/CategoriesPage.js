@@ -17,7 +17,7 @@ function CategoriesPage() {
       <Logo noWordmark={true} />
       <Pagination 
         index={1}
-        total={2}
+        total={3}
         prev=''
         next='/wrapped/monthly-overview'
         />
