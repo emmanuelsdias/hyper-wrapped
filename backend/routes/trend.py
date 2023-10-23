@@ -8,6 +8,7 @@ from schemas.trend import MonthlyOverview
 
 router = APIRouter()
 
+
 @router.get("/monthly-overview/{user_id}/{year}", response_model=MonthlyOverview)
 def monthly_overview(
     user_id: int, 

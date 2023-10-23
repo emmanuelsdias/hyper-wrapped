@@ -1,0 +1,89 @@
+@import '../../styles/fonts.css';
+@import '../../styles/themes.css';
+
+* {
+  margin  : 0;
+  padding : 0;
+}
+
+/* GENERAL WRAPPED PAGES */
+
+.wrapped-page {
+  margin    : auto;
+  height    : 100%;
+  max-width : 1000px;
+}
+
+.wrapped-page .logo {
+  position : absolute;
+  margin   : auto 0;
+  top      : 20px;
+  left     : 0;
+  right    : 0;
+}
+
+.wrapped-page .pagination {
+  position : absolute;
+  bottom   : 15px;
+  right    : 25px;
+}
+
+@media (min-width: 600px) {
+  .wrapped-page .pagination {
+    bottom : 30px;
+    right  : 50px;
+  }
+}
+
+.wrapped-page .wrapped-container {
+  width       : calc(100%-40px);
+  padding     : 0 20px;
+  height      : 100%;
+  display     : grid;
+  place-items : center;
+}
+
+.wrapped-page .wrapped-container > * {
+  grid-row-start    : 1;
+  grid-column-start : 1;
+}
+
+/* MONTHLY OVERVIEW PAGE */
+
+#monthly-overview-page p {
+  font-family : 'Gellix';
+  font-size   : 32px;
+  font-weight : 600;
+}
+
+#monthly-overview-page .bar-text-top,
+#monthly-overview-page .bar-text-bottom {
+  font-family : 'Gellix';
+  font-size   : 12px;
+}
+
+@media (min-width: 600px) {
+  #monthly-overview-page .bar-text-top,
+  #monthly-overview-page .bar-text-bottom {
+    font-size : 24px;
+  }
+}
+
+#monthly-overview-page .bar-text-bottom {
+  fill : var(--WHITE);
+}
+
+#monthly-overview-page .bar-text-top,
+#monthly-overview-page .bar {
+  fill : var(--PURPLE-4);
+}
+
+#monthly-overview-page .maximum {
+  fill  : var(--HIGHLIGHT-3);
+  color : var(--HIGHLIGHT-3);
+}
+
+#monthly-overview-page .minimum {
+  fill  : var(--HIGHLIGHT-2);
+  color : var(--HIGHLIGHT-2);
+}

@@ -1,6 +1,7 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const initialState = {
+  currentYear: 2023,
   isLogged: false,
   username: '',
   firstName: '',

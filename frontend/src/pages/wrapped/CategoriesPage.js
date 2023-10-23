@@ -13,7 +13,7 @@ function CategoriesPage() {
   }
 
   return (
-    <div id='categories-page'>
+    <div className='wrapped-page' id='categories-page'>
       <Logo noWordmark={true} />
       <Pagination 
         index={1}

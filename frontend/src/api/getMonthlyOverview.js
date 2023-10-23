@@ -4,7 +4,7 @@ const API_URL = require('./config.js');
 
 export async function getMonthlyOverview(userId, year) {
   try {
-    const response = await axios.get(`${API_URL}/trend/monthly-overview/{${userId}/${year}`);
+    const response = await axios.get(`${API_URL}/trend/monthly-overview/${userId}/${year}`);
     if (response.status === 200) {
       return response.data;
     } 

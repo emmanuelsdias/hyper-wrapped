@@ -1,4 +1,4 @@
-from sqlalchemy import func
+from sqlalchemy import func, cast, Numeric
 from sqlalchemy.orm import Session
 
 from models.transaction import Transaction
@@ -8,7 +8,10 @@ from schemas.trend import MonthlyOverview
 def get_monthly_overview(db: Session, user_id: int, year: int) -> MonthlyOverview:
     # Query to calculate the sum of amounts for each month
     monthly_summary = (
-        db.query(Transaction.month, func.sum(Transaction.amount).label('total'))
+        db.query(
+            Transaction.month, 
+            cast(func.sum(Transaction.amount), Numeric(10, 0)).label('total')
+        )
         .filter(Transaction.user_id == user_id, Transaction.year == year)
         .group_by(Transaction.month)
         .all()

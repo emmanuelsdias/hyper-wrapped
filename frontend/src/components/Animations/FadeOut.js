@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 
-function FadeOut({children, delay, duration = 0.5 }) {
+function FadeOut({ children, delay = 0, duration = 0.5, expand = false }) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      style={expand ? { width: '100%' } : {}}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 0 }}
       transition={{ delay: delay, duration: duration }}
     >
       {children}
@@ -13,4 +14,4 @@ function FadeOut({children, delay, duration = 0.5 }) {
   );
 };
 
-export default FadeIn;
+export default FadeOut;
