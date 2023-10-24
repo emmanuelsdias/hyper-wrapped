@@ -3,7 +3,8 @@ from pydantic import BaseModel
 
 class CategorySchema(BaseModel):
     mcc: int
-    category_description: str
+    general_description: str
+    full_description: str
 
     class Config:
         from_attributes = True

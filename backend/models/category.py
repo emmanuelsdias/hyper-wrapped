@@ -7,4 +7,5 @@ class Category(Base):
 
     mcc = Column(Integer, primary_key=True, index=True)
     
-    category_description = Column(String)
+    general_description = Column(String)
+    full_description = Column(String)

@@ -60,21 +60,46 @@
   grid-column-start : 1;
 }
 
-/* MONTHLY / DAILY AVERAGE OVERVIEW PAGE */
-
-#monthly-overview-page p,
-#daily-average-overview-page p {
+.wrapped-page p {
   font-family : 'Gellix';
   font-size   : 28px;
   font-weight : 600;
 }
 
 @media (min-width: 600px) and (min-height: 600px) {
-  #monthly-overview-page p,
-  #daily-average-overview-page p {
+  .wrapped-page p {
     font-size : 40px;
   }
 }
+
+.wrapped-page .maximum {
+  fill  : var(--HIGHLIGHT-3);
+  color : var(--HIGHLIGHT-3);
+}
+
+.wrapped-page .minimum {
+  fill  : var(--HIGHLIGHT-2);
+  color : var(--HIGHLIGHT-2);
+}
+
+.wrapped-page .attention {
+  color : var(--PURPLE-4);
+}
+
+/* BIGGEST SPENDING PAGE */
+#biggest-spending-page .b-t-amount {
+  color : var(--PURPLE-4);
+}
+#biggest-spending-page .b-t-description {
+  color : var(--GREY-3);
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+}
+
+
+/* MONTHLY / DAILY AVERAGE OVERVIEW PAGE */
 
 #monthly-overview-page .bar-text-top,
 #monthly-overview-page .bar-text-bottom {
@@ -102,10 +127,6 @@
   }
 }
 
-#daily-average-overview-page .attention {
-  color : var(--PURPLE-4);
-}
-
 #monthly-overview-page .bar-text-bottom,
 #daily-average-overview-page .bar-text-bottom {
   fill : var(--WHITE);
@@ -125,14 +146,4 @@
   fill : var(--PURPLE-3);
 }
 
-#monthly-overview-page .maximum,
-#daily-average-overview-page .maximum {
-  fill  : var(--HIGHLIGHT-3);
-  color : var(--HIGHLIGHT-3);
-}
 
-#monthly-overview-page .minimum,
-#daily-average-overview-page .minimum {
-  fill  : var(--HIGHLIGHT-2);
-  color : var(--HIGHLIGHT-2);
-}

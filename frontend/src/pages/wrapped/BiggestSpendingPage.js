@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
@@ -8,16 +8,41 @@ import FadeIn from '../../components/Animations/FadeIn';
 import FadeInAndOut from '../../components/Animations/FadeInAndOut';
 import Reveal from '../../components/Animations/Reveal';
 import Slide from '../../components/Animations/Slide';
-import HorizontalBarChart from '../../components/Data/HorizontalBarChart';
 import Pagination from '../../components/Pagination/Pagination';
-import { getDailyAverageOverview } from '../../api/getDailyAverageOverview';
+import { getBiggestSpending } from '../../api/getBiggestSpending';
 import { useWindowDimensions } from '../../utils/window';
-
+import { getDays, getMonthsNames, nth } from '../../utils/date';
 
 function BiggestSpendingPage() {
   const { height, width } = useWindowDimensions();
 
+  const days = getDays();
+  const months = getMonthsNames();
+
+  const currentYear = useSelector((state) => state.currentYear);
   const isLogged = useSelector((state) => state.isLogged);
+  const userId = useSelector((state) => state.userId);
+
+  const [day, setDay] = useState('');
+  const [month, setMonth] = useState('');
+  const [amount, setAmount] = useState('');
+  const [description, setDescription] = useState('');
+
+  useEffect(() => {
+    const fetchBiggestSpendingData = async () => {
+      try {
+        const data = await getBiggestSpending(userId, currentYear);
+        console.log(data);
+        setDay(data.day);
+        setMonth(data.month);
+        setAmount(data.amount);
+        setDescription(data.general_description);
+      } catch (error) {
+        console.error('Error fetching biggest spending data:', error);
+      }
+    };
+    fetchBiggestSpendingData();
+  }, []);
 
   if (!isLogged) {
     return <Navigate to="/" />;
@@ -25,19 +50,37 @@ function BiggestSpendingPage() {
 
   return (
     <div className='wrapped-page' id='biggest-spending-page'>
-      <Slide delay={7.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
+      <Slide delay={6.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
         <Logo noWordmark={true} />
       } /> 
-      <Reveal delay={8} length={20} direction={'right'} children={
+      <Reveal delay={7} length={20} direction={'right'} children={
         <span className='title'>Biggest Spending</span>
       } />
-      {/* Sometimes it's best to forget everything and spend like there is no tomorrow */}
-      <Pagination 
-        index={1}
-        total={6}
-        prev=''
-        next='/wrapped/monthly-overview'
-        />
+      <div className='wrapped-container'>
+        <FadeInAndOut waitBetween={3} children={
+          <p>Be it a <span className='maximum'>planned trip</span> or an <span className='minimum'>emergency</span>, there is always a day where we go big...</p>
+        } />
+        <FadeInAndOut delay={4} waitBetween={2} children={
+          <p>Here is your <span className='attention'>highest transaction</span> from this year.</p>
+        } />
+        
+        <Reveal delay={7} length={50} direction={'right'} children={
+          <div id='biggest-transaction'>
+            <p className='b-t-date'>{`${months[month]} ${days[day]}${nth(day)}`}</p>
+            <p className='b-t-amount'>{`U\$ ${amount}`}</p>
+            <p className='b-t-description'>{`spent on ${description}`}</p>
+          </div>
+          // <BarChart xLabel={monthsInitials} delay={6} height={Math.min(height - 150, 300)} data={monthlyData} />
+        } />
+      </div>
+      <FadeIn delay={7} duration={1} min_opacity={0.2} children={
+        <Pagination 
+          index={1}
+          total={5}
+          prev=''
+          next='/wrapped/monthly-overview'
+          />
+      } />
     </div>
   );
 }

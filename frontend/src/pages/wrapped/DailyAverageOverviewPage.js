@@ -81,12 +81,14 @@ function DailyAverageOverviewPage() {
           <HorizontalBarChart delay={8} xLabel={labelDays} height={height - 150} gradual={true} data={dailyData} />
         } />
       </div>
-      <Pagination
-        index={3}
-        total={6}
-        prev='/wrapped/monthly-overview'
-        next='/wrapped/most-frequent-categories'
-      />
+      <FadeIn delay={8} duration={1} min_opacity={0.2} children={
+        <Pagination
+          index={3}
+          total={5}
+          prev='/wrapped/monthly-overview'
+          next='/wrapped/most-frequent-categories'
+        />
+      } />
     </div>
   );
 }

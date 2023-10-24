@@ -26,12 +26,14 @@ function MostFrequentCategoriesPage() {
   return (
     <div className='wrapped-page' id='most-frequent-categories-page'>
       <Logo noWordmark={true} />
-      <Pagination 
-        index={5}
-        total={6}
-        prev='/wrapped/daily-average-overview'
-        next='/wrapped/most-spent-categories'
-        />
+      <FadeIn delay={0} duration={1} min_opacity={0.2} children={
+        <Pagination 
+          index={4}
+          total={5}
+          prev='/wrapped/daily-average-overview'
+          next='/wrapped/most-spent-categories'
+          />
+        } />
     </div>
   );
 }

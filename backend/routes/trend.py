@@ -1,12 +1,22 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from controllers import trend_controller
+from controllers import transaction_controller, trend_controller
 from database.db import get_db
-from schemas.trend import MonthlyOverview, DailyAverageOverview
+from schemas.trend import BiggestSpending, MonthlyOverview, DailyAverageOverview
 
 
 router = APIRouter()
+
+
+@router.get("/biggest-spending/{user_id}/{year}", response_model=BiggestSpending)
+def monthly_overview(
+    user_id: int, 
+    year: int, 
+    db: Session = Depends(get_db)
+):
+    biggest_spending = transaction_controller.get_biggest_spending(db, user_id, year)
+    return biggest_spending
 
 
 @router.get("/monthly-overview/{user_id}/{year}", response_model=MonthlyOverview)

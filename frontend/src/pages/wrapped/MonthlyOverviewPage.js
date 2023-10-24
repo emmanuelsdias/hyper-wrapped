@@ -80,12 +80,14 @@ function MonthlyOverviewPage() {
           <BarChart xLabel={monthsInitials} delay={8} height={Math.min(height - 150, 300)} data={monthlyData} />
         } />
       </div>
-      <Pagination
-        index={2}
-        total={6}
-        prev='/wrapped/biggest-spending'
-        next='/wrapped/daily-average-overview'
-      />
+      <FadeIn delay={8} duration={1} min_opacity={0.2} children={
+        <Pagination
+          index={2}
+          total={5}
+          prev='/wrapped/biggest-spending'
+          next='/wrapped/daily-average-overview'
+        />
+      } />
     </div>
   );
 }
