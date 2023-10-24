@@ -57,29 +57,29 @@ function DailyAverageOverviewPage() {
 
   return (
     <div className='wrapped-page' id='daily-average-overview-page'>
-      <Slide delay={5.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
+      <Slide delay={7.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
         <Logo noWordmark={true} />
       } /> 
-      <Reveal delay={6} length={20} direction={'right'} children={
+      <Reveal delay={8} length={20} direction={'right'} children={
         <span className='title'>Daily Average Spendings</span>
       } />
       <div className='wrapped-container'>
-        <FadeInAndOut waitBetween={1} children={
+        <FadeInAndOut waitBetween={2} children={
           <p>Now, let's see your <span className='attention'>expenses</span> throught the <span className='attention'>month</span>...</p>
         } />
         <div>
-          <Slide delay={3} length={50} duration={0.5} children={
-            <FadeInAndOut delay={2} waitBetween={3} children={
+          <Slide delay={4.5} length={50} duration={0.5} children={
+            <FadeInAndOut delay={3} waitBetween={4} children={
               <p>On average, you spent the most on the <span className='maximum'>{maxDay}{nth(maxDay)}</span>.</p>
             } />
           } />
           <br />
-          <FadeInAndOut delay={3.5} waitBetween={1.5} children={
+          <FadeInAndOut delay={5} waitBetween={2} children={
             <p>Meanwhile, you spent the least on the <span className='minimum'>{minDay}{nth(minDay)}</span>.</p>
           } />
         </div>
-        <FadeIn delay={6} expand={true} children={
-          <HorizontalBarChart delay={6} xLabel={labelDays} height={height - 150} gradual={true} data={dailyData} />
+        <FadeIn delay={8} expand={true} children={
+          <HorizontalBarChart delay={8} xLabel={labelDays} height={height - 150} gradual={true} data={dailyData} />
         } />
       </div>
       <Pagination

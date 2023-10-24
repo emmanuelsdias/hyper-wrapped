@@ -29,7 +29,7 @@
   color : var(--PURPLE-3);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (min-height: 600px) {
   #home-page p {
     font-size : 60px;
   }

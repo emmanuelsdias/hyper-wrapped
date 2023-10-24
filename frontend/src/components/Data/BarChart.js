@@ -1,14 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-function BarChart({ data, xLabel, delay = 0, gap = 6, gradual = false, rotate = false }) {
+function BarChart({ data, xLabel, height, delay = 0, gap = 6, gradual = false, rotate = false }) {
   const svgRef = useRef();
   const dataWithLabels = d3.zip(data, xLabel);
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
     const width = svgRef.current.parentElement.clientWidth;
-    const height = 300;
 
     // Find the maximum value and its index
     const maxDataValue = Math.max(...data);
@@ -87,7 +86,7 @@ function BarChart({ data, xLabel, delay = 0, gap = 6, gradual = false, rotate = 
       <svg
         ref={svgRef}
         width="100%"
-        height={300}
+        height={height}
         overflow={"visible"}
       />
     </div>

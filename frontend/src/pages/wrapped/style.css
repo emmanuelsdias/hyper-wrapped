@@ -65,8 +65,15 @@
 #monthly-overview-page p,
 #daily-average-overview-page p {
   font-family : 'Gellix';
-  font-size   : 32px;
+  font-size   : 28px;
   font-weight : 600;
+}
+
+@media (min-width: 600px) and (min-height: 600px) {
+  #monthly-overview-page p,
+  #daily-average-overview-page p {
+    font-size : 40px;
+  }
 }
 
 #monthly-overview-page .bar-text-top,
@@ -88,7 +95,7 @@
   font-size   : 14px;
 }
 
-@media (min-height: 800px) {
+@media (min-height: 860px) {
   #daily-average-overview-page .bar-text-top,
   #daily-average-overview-page .bar-text-bottom {
     font-size : 20px;
