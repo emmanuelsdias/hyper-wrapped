@@ -2,14 +2,14 @@ import { React, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-import './style.css'
+import './style.css';
 import Logo from '../../components/Logo/Logo';
 import FadeIn from '../../components/Animations/FadeIn';
 import FadeInAndOut from '../../components/Animations/FadeInAndOut';
 import Reveal from '../../components/Animations/Reveal';
 import Slide from '../../components/Animations/Slide';
 import BarChart from '../../components/Data/BarChart';
-import Pagination from '../../components/Pagination/Pagination'
+import Pagination from '../../components/Pagination/Pagination';
 import { getMonthlyOverview } from '../../api/getMonthlyOverview';
 import { useWindowDimensions } from '../../utils/window';
 import { getMonthsNames, getMonthsInitials } from '../../utils/date';
@@ -82,8 +82,8 @@ function MonthlyOverviewPage() {
       </div>
       <Pagination
         index={2}
-        total={3}
-        prev='/wrapped/categories'
+        total={6}
+        prev='/wrapped/biggest-spending'
         next='/wrapped/daily-average-overview'
       />
     </div>

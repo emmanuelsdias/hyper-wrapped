@@ -8,7 +8,7 @@ function WrappedPage() {
   if (!isLogged) {
     return <Navigate to='/' />;
   }
-  return <Navigate to='/wrapped/categories' />
+  return <Navigate to='/wrapped/biggest-spending' />
 }
 
 export default WrappedPage;

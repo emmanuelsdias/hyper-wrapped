@@ -15,7 +15,6 @@ import { useWindowDimensions } from '../../utils/window';
 import { getDays, getEveryOtherDay, nth } from '../../utils/date';
 
 
-
 function DailyAverageOverviewPage() {
   const { height, width } = useWindowDimensions();
 
@@ -84,9 +83,9 @@ function DailyAverageOverviewPage() {
       </div>
       <Pagination
         index={3}
-        total={3}
+        total={6}
         prev='/wrapped/monthly-overview'
-        next=''
+        next='/wrapped/most-frequent-categories'
       />
     </div>
   );
