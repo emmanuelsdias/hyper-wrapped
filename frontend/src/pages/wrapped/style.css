@@ -6,6 +6,10 @@
   padding : 0;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 /* GENERAL WRAPPED PAGES */
 
 .wrapped-page {
@@ -16,10 +20,18 @@
 
 .wrapped-page .logo {
   position : absolute;
-  margin   : auto 0;
-  top      : 20px;
-  left     : 0;
-  right    : 0;
+  margin   : 0;
+  top      : 22px;
+  left     : max(20px, calc(50% - 480px));
+}
+
+.wrapped-page .title {
+  position    : absolute;
+  top         : 20px;
+  left        : max(70px, calc(50% - 430px));
+  font-family : 'Gellix';
+  font-weight : 600;
+  font-size   : 20px;
 }
 
 .wrapped-page .pagination {
@@ -48,7 +60,7 @@
   grid-column-start : 1;
 }
 
-/* MONTHLY OVERVIEW PAGE */
+/* MONTHLY / DAILY AVERAGE OVERVIEW PAGE */
 
 #monthly-overview-page p,
 #daily-average-overview-page p {
@@ -58,20 +70,33 @@
 }
 
 #monthly-overview-page .bar-text-top,
-#monthly-overview-page .bar-text-bottom,
-#daily-average-overview-page .bar-text-top,
-#daily-average-overview-page .bar-text-bottom {
+#monthly-overview-page .bar-text-bottom {
   font-family : 'Gellix';
   font-size   : 12px;
 }
 
 @media (min-width: 600px) {
   #monthly-overview-page .bar-text-top,
-  #monthly-overview-page .bar-text-bottom,
-  #daily-average-overview-page .bar-text-top,
-  #daily-average-overview-page .bar-text-bottom {
+  #monthly-overview-page .bar-text-bottom{
     font-size : 24px;
   }
+}
+
+#daily-average-overview-page .bar-text-top,
+#daily-average-overview-page .bar-text-bottom {
+  font-family : 'Gellix';
+  font-size   : 14px;
+}
+
+@media (min-height: 800px) {
+  #daily-average-overview-page .bar-text-top,
+  #daily-average-overview-page .bar-text-bottom {
+    font-size : 20px;
+  }
+}
+
+#daily-average-overview-page .attention {
+  color : var(--PURPLE-4);
 }
 
 #monthly-overview-page .bar-text-bottom,

@@ -1,12 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 
-function Reveal({ children, delay = 0, length = 10, duration = 0.3, direction = 'up', expand = false }) {
+function Slide({children, delay = 0, length = 10, duration = 0.3, direction = 'up', expand = false }) {
   return (
     <motion.div
       style={expand ? { width: '100%' } : {}}
       initial={{ 
-        opacity: 0, 
         x: direction === 'left' 
             ? length 
             : direction === 'right' 
@@ -18,12 +17,13 @@ function Reveal({ children, delay = 0, length = 10, duration = 0.3, direction = 
               ? -length 
               : 0
       }}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ delay: delay, duration: duration }}
+      animate={{ x: 0, y: 0 }}
+      transition={{ delay: delay, duration: duration, ease: [0.68, 0, 0.27, 1.3] }}
+      overflow='hidden'
     >
       {children}
     </motion.div>
   );
 };
 
-export default Reveal;
+export default Slide;
