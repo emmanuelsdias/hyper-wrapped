@@ -47,7 +47,6 @@ function MonthlyOverviewPage() {
         console.error('Error fetching monthly data:', error);
       }
     };
-
     fetchMonthlyData();
   }, []);
 

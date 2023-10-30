@@ -34,6 +34,22 @@
   font-size   : 20px;
 }
 
+.wrapped-page .background-symbol {
+  position    : absolute;
+  left        : 0;
+  right       : 0;
+  top         : 0;
+  bottom      : 0;
+  text-align  : center;
+  overflow    : hidden;
+  z-index     : -100;
+  font-family : 'Gellix';
+  font-weight : 900;
+  font-size   : 800px;
+  color       : var(--PURPLE-1);
+  user-select : none;
+}
+
 .wrapped-page .pagination {
   position : absolute;
   bottom   : 15px;
@@ -89,18 +105,18 @@
 }
 
 /* BIGGEST SPENDING PAGE */
+
 #biggest-spending-page .b-t-amount {
   color : var(--PURPLE-4);
 }
 
 #biggest-spending-page .b-t-description {
-  color : var(--GREY-3);
+  color : var(--GREY-4);
   font-family: 'Inter';
   font-weight: 400;
   font-size: 20px;
   font-style: italic;
 }
-
 
 /* MONTHLY / DAILY AVERAGE OVERVIEW PAGE */
 
@@ -160,4 +176,3 @@
 #most-frequent-categories-page .pos3 {
   color : var(--HIGHLIGHT-1);
 }
-

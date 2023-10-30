@@ -57,9 +57,12 @@ function BiggestSpendingPage() {
       <Reveal delay={7} length={20} direction={'right'} children={
         <span className='title'>Biggest Spending</span>
       } />
+      <FadeIn delay={6} children={
+        <div className='background-symbol'>$</div>
+      } />
       <div className='wrapped-container'>
         <FadeInAndOut waitBetween={3} children={
-          <p>Be it a <span className='maximum'>planned trip</span> or an <span className='minimum'>emergency</span>, there is always a day where we go big...</p>
+          <p>Be it a <span className='maximum'>planned trip</span> or an <span className='minimum'>emergency</span>, there is always a day where we need to go big...</p>
         } />
         <FadeInAndOut delay={4} waitBetween={2} children={
           <p>Here is your <span className='attention'>highest transaction</span> from this year.</p>
