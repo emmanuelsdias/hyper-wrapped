@@ -64,7 +64,7 @@ function DailyAverageOverviewPage() {
       } />
       <div className='wrapped-container'>
         <FadeInAndOut waitBetween={2} children={
-          <p>Now, let's see your <span className='attention'>expenses</span> throught the <span className='attention'>month</span>...</p>
+          <p>Now, let's see your <span className='attention'>expenses</span> throughout the <span className='attention'>month</span>...</p>
         } />
         <div>
           <Slide delay={4.5} length={50} duration={0.5} children={
