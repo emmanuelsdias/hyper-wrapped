@@ -29,6 +29,10 @@ function DailyAverageOverviewPage() {
   const [maxDay, setMaxDay] = useState('');
   const [minDay, setMinDay] = useState('');
 
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
+  
   useEffect(() => {
     const fetchDailyData = async () => {
       try {
@@ -49,10 +53,6 @@ function DailyAverageOverviewPage() {
     };
     fetchDailyData();
   }, []);
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
 
   return (
     <div className='wrapped-page' id='daily-average-overview-page'>

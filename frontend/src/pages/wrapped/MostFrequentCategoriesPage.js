@@ -23,6 +23,10 @@ function MostFrequentCategoriesPage() {
 
   const [topCategories, setTopCategories] = useState([]);
 
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
+
   useEffect(() => {
     const fetchMostFrequentCategories = async () => {
       try {
@@ -34,10 +38,6 @@ function MostFrequentCategoriesPage() {
     };
     fetchMostFrequentCategories();
   }, []);
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
 
   return (
     <div className='wrapped-page' id='most-frequent-categories-page'>

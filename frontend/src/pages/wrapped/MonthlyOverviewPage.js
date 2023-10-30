@@ -29,6 +29,10 @@ function MonthlyOverviewPage() {
   const [maxMonth, setMaxMonth] = useState('');
   const [minMonth, setMinMonth] = useState('');
 
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
+
   useEffect(() => {
     const fetchMonthlyData = async () => {
       try {
@@ -49,10 +53,6 @@ function MonthlyOverviewPage() {
     };
     fetchMonthlyData();
   }, []);
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
 
   return (
     <div className='wrapped-page' id='monthly-overview-page'>

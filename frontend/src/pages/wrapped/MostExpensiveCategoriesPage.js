@@ -23,6 +23,10 @@ function MostExpensiveCategoriesPage() {
 
   const [topCategories, setTopCategories] = useState([]);
 
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
+
   useEffect(() => {
     const fetchMostExpensiveCategories = async () => {
       try {
@@ -34,10 +38,6 @@ function MostExpensiveCategoriesPage() {
     };
     fetchMostExpensiveCategories();
   }, []);
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
 
   return (
     <div className='wrapped-page' id='most-expensive-categories-page'>
