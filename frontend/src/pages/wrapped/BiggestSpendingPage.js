@@ -12,6 +12,8 @@ import Pagination from '../../components/Pagination/Pagination';
 import { getBiggestSpending } from '../../api/getBiggestSpending';
 import { useWindowDimensions } from '../../utils/window';
 import { getDays, getMonthsNames, nth } from '../../utils/date';
+import { numberWithCommas } from '../../utils/number';
+
 
 function BiggestSpendingPage() {
   const { height, width } = useWindowDimensions();
@@ -65,7 +67,7 @@ function BiggestSpendingPage() {
         <Reveal delay={7} length={50} direction={'right'} children={
           <div id='biggest-transaction'>
             <p className='b-t-date'>{`${months[month]} ${days[day]}${nth(day)}`}</p>
-            <p className='b-t-amount'>{`U\$ ${amount}`}</p>
+            <p className='b-t-amount'>{`U\$ ${numberWithCommas(amount)}`}</p>
             <p className='b-t-description'>{`spent on ${description}`}</p>
           </div>
         } />
