@@ -80,7 +80,7 @@ function BiggestSpendingPage() {
           index={1}
           total={5}
           prev=''
-          next='/wrapped/monthly-overview'
+          next='/wrapped/most-frequent-categories'
         />
       } />
     </div>

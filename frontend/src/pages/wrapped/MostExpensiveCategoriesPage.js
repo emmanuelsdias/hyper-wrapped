@@ -66,7 +66,7 @@ function MostExpensiveCategoriesPage() {
         <Pagination 
           index={5}
           total={5}
-          prev='/wrapped/most-frequent-categories'
+          prev='/wrapped/daily-average-overview'
           next=''
           />
         } />

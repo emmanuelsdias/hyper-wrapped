@@ -81,9 +81,9 @@ function MonthlyOverviewPage() {
       </div>
       <FadeIn delay={8} duration={1} min_opacity={0.2} children={
         <Pagination
-          index={2}
+          index={3}
           total={5}
-          prev='/wrapped/biggest-spending'
+          prev='/wrapped/most-frequent-categories'
           next='/wrapped/daily-average-overview'
         />
       } />

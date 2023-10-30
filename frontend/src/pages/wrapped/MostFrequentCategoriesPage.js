@@ -64,10 +64,10 @@ function MostFrequentCategoriesPage() {
       </div>
       <FadeIn delay={7} duration={1} min_opacity={0.2} children={
         <Pagination
-          index={4}
+          index={2}
           total={5}
-          prev='/wrapped/daily-average-overview'
-          next='/wrapped/most-expensive-categories'
+          prev='/wrapped/biggest-spending'
+          next='/wrapped/monthly-overview'
         />
       } />
     </div>

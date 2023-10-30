@@ -83,10 +83,10 @@ function DailyAverageOverviewPage() {
       </div>
       <FadeIn delay={8} duration={1} min_opacity={0.2} children={
         <Pagination
-          index={3}
+          index={4}
           total={5}
           prev='/wrapped/monthly-overview'
-          next='/wrapped/most-frequent-categories'
+          next='/wrapped/most-expensive-categories'
         />
       } />
     </div>
