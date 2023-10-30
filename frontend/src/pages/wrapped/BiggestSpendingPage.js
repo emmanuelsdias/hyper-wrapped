@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-import './style.css'
+import './style.css';
 import Logo from '../../components/Logo/Logo';
 import FadeIn from '../../components/Animations/FadeIn';
 import FadeInAndOut from '../../components/Animations/FadeInAndOut';

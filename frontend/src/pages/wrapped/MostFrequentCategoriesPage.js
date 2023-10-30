@@ -2,14 +2,13 @@ import { React, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-import './style.css'
-import CategoryCard from '../../components/CategoryCard/CategoryCard'
+import './style.css';
+import CategoryCard from '../../components/CategoryCard/CategoryCard';
 import Logo from '../../components/Logo/Logo';
 import FadeIn from '../../components/Animations/FadeIn';
 import FadeInAndOut from '../../components/Animations/FadeInAndOut';
 import Reveal from '../../components/Animations/Reveal';
 import Slide from '../../components/Animations/Slide';
-import HorizontalBarChart from '../../components/Data/HorizontalBarChart';
 import Pagination from '../../components/Pagination/Pagination';
 import { getMostFrequentCategories } from '../../api/getMostFrequentCategories';
 import { useWindowDimensions } from '../../utils/window';
@@ -23,10 +22,6 @@ function MostFrequentCategoriesPage() {
   const userId = useSelector((state) => state.userId);
 
   const [topCategories, setTopCategories] = useState([]);
-
-  // useEffect(() => {
-  //   console.log('Most frequent categories:', topCategories);
-  // }, [topCategories]);
 
   useEffect(() => {
     const fetchMostFrequentCategories = async () => {

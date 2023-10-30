@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-import './style.css'
+import './style.css';
 import logoSymbol from '../../images/double_symbol.svg';
 import sadRobot from '../../images/sad_robot.jpg';
 import { login } from '../../store';

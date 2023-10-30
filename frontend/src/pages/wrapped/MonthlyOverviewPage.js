@@ -38,7 +38,7 @@ function MonthlyOverviewPage() {
 
         const maxIndex = dataArray.indexOf(Math.max(...dataArray));
         setMaxMonth(months[maxIndex]);
-        
+
         const minIndex = dataArray.indexOf(Math.min(...dataArray));
         setMinMonth(months[minIndex]);
 
@@ -59,7 +59,7 @@ function MonthlyOverviewPage() {
     <div className='wrapped-page' id='monthly-overview-page'>
       <Slide delay={7.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
         <Logo noWordmark={true} />
-      } /> 
+      } />
       <Reveal delay={8} length={20} direction={'right'} children={
         <span className='title'>Monthly Spendings</span>
       } />

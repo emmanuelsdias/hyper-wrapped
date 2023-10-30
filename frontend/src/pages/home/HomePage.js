@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import './style.css'
-import Logo from '../../components/Logo/Logo'
-import FadeIn from '../../components/Animations/FadeIn'
-import Reveal from '../../components/Animations/Reveal'
+import './style.css';
+import Logo from '../../components/Logo/Logo';
+import FadeIn from '../../components/Animations/FadeIn';
+import Reveal from '../../components/Animations/Reveal';
 
 function HomePage() {
   const isLogged = useSelector((state) => state.isLogged);

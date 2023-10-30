@@ -152,12 +152,12 @@
 /* MOST FREQUENT CATEGORIES PAGE */
 
 #most-frequent-categories-page .pos1 {
-  color: var(--HIGHLIGHT-2);
+  color : var(--HIGHLIGHT-2);
 }
 #most-frequent-categories-page .pos2 {
-  color: var(--HIGHLIGHT-3);
+  color : var(--HIGHLIGHT-3);
 }
 #most-frequent-categories-page .pos3 {
-  color: var(--HIGHLIGHT-1);
+  color : var(--HIGHLIGHT-1);
 }
 

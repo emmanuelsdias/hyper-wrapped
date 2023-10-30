@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-import './style.css'
+import './style.css';
 import Logo from '../../components/Logo/Logo';
 import FadeIn from '../../components/Animations/FadeIn';
 import FadeInAndOut from '../../components/Animations/FadeInAndOut';
@@ -58,7 +58,7 @@ function DailyAverageOverviewPage() {
     <div className='wrapped-page' id='daily-average-overview-page'>
       <Slide delay={7.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
         <Logo noWordmark={true} />
-      } /> 
+      } />
       <Reveal delay={8} length={20} direction={'right'} children={
         <span className='title'>Daily Average Spendings</span>
       } />
