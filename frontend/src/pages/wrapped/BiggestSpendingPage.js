@@ -32,7 +32,6 @@ function BiggestSpendingPage() {
     const fetchBiggestSpendingData = async () => {
       try {
         const data = await getBiggestSpending(userId, currentYear);
-        console.log(data);
         setDay(data.day);
         setMonth(data.month);
         setAmount(data.amount);
@@ -52,7 +51,7 @@ function BiggestSpendingPage() {
     <div className='wrapped-page' id='biggest-spending-page'>
       <Slide delay={6.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
         <Logo noWordmark={true} />
-      } /> 
+      } />
       <Reveal delay={7} length={20} direction={'right'} children={
         <span className='title'>Biggest Spending</span>
       } />
@@ -63,23 +62,21 @@ function BiggestSpendingPage() {
         <FadeInAndOut delay={4} waitBetween={2} children={
           <p>Here is your <span className='attention'>highest transaction</span> from this year.</p>
         } />
-        
         <Reveal delay={7} length={50} direction={'right'} children={
           <div id='biggest-transaction'>
             <p className='b-t-date'>{`${months[month]} ${days[day]}${nth(day)}`}</p>
             <p className='b-t-amount'>{`U\$ ${amount}`}</p>
             <p className='b-t-description'>{`spent on ${description}`}</p>
           </div>
-          // <BarChart xLabel={monthsInitials} delay={6} height={Math.min(height - 150, 300)} data={monthlyData} />
         } />
       </div>
       <FadeIn delay={7} duration={1} min_opacity={0.2} children={
-        <Pagination 
+        <Pagination
           index={1}
           total={5}
           prev=''
           next='/wrapped/monthly-overview'
-          />
+        />
       } />
     </div>
   );

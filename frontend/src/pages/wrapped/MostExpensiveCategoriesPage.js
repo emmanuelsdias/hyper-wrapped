@@ -14,7 +14,7 @@ import { getDailyAverageOverview } from '../../api/getDailyAverageOverview';
 import { useWindowDimensions } from '../../utils/window';
 
 
-function MostSpentCategoriesPage() {
+function MostExpensiveCategoriesPage() {
   const { height, width } = useWindowDimensions();
   
   const isLogged = useSelector((state) => state.isLogged);
@@ -24,9 +24,14 @@ function MostSpentCategoriesPage() {
   }
 
   return (
-    <div className='wrapped-page' id='most-spent-categories-page'>
-      <Logo noWordmark={true} />
-      <FadeIn delay={0} duration={1} min_opacity={0.2} children={
+    <div className='wrapped-page' id='most-expensive-categories-page'>
+      <Slide delay={2.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
+        <Logo noWordmark={true} />
+      } /> 
+      <Reveal delay={3} length={20} direction={'right'} children={
+        <span className='title'>Most Spent Categories</span>
+      } />
+      <FadeIn delay={3} duration={1} min_opacity={0.2} children={
         <Pagination 
           index={5}
           total={5}
@@ -38,4 +43,4 @@ function MostSpentCategoriesPage() {
   );
 }
 
-export default MostSpentCategoriesPage;
+export default MostExpensiveCategoriesPage;

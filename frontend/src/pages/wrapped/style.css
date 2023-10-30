@@ -73,11 +73,13 @@
 }
 
 .wrapped-page .maximum {
+  font-weight: 600;
   fill  : var(--HIGHLIGHT-3);
   color : var(--HIGHLIGHT-3);
 }
 
 .wrapped-page .minimum {
+  font-weight: 600;
   fill  : var(--HIGHLIGHT-2);
   color : var(--HIGHLIGHT-2);
 }
@@ -90,6 +92,7 @@
 #biggest-spending-page .b-t-amount {
   color : var(--PURPLE-4);
 }
+
 #biggest-spending-page .b-t-description {
   color : var(--GREY-3);
   font-family: 'Inter';
@@ -146,4 +149,15 @@
   fill : var(--PURPLE-3);
 }
 
+/* MOST FREQUENT CATEGORIES PAGE */
+
+#most-frequent-categories-page .pos1 {
+  color: var(--HIGHLIGHT-2);
+}
+#most-frequent-categories-page .pos2 {
+  color: var(--HIGHLIGHT-3);
+}
+#most-frequent-categories-page .pos3 {
+  color: var(--HIGHLIGHT-1);
+}
 

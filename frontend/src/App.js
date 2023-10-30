@@ -8,7 +8,7 @@ import BiggestSpendingPage from './pages/wrapped/BiggestSpendingPage';
 import MonthlyOverviewPage from './pages/wrapped/MonthlyOverviewPage';
 import DailyAverageOverviewPage from './pages/wrapped/DailyAverageOverviewPage';
 import MostFrequentCategoriesPage from './pages/wrapped/MostFrequentCategoriesPage';
-import MostSpentCategoriesPage from './pages/wrapped/MostSpentCategoriesPage';
+import MostExpensiveCategoriesPage from './pages/wrapped/MostExpensiveCategoriesPage';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/wrapped/monthly-overview" element={<MonthlyOverviewPage />} />
         <Route path="/wrapped/daily-average-overview" element={<DailyAverageOverviewPage />} />
         <Route path="/wrapped/most-frequent-categories" element={<MostFrequentCategoriesPage />} />
-        <Route path="/wrapped/most-spent-categories" element={<MostSpentCategoriesPage />} />
+        <Route path="/wrapped/most-expensive-categories" element={<MostExpensiveCategoriesPage />} />
       </Routes>
     </Router>
   );
