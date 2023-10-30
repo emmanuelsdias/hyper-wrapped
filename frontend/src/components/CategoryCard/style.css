@@ -10,22 +10,7 @@
   gap             : 20px;
 }
 
-.category-card.pos1,
-.category-card.pos4 {
-  background-color : var(--HIGHLIGHT-2);
-}
-
-.category-card.pos2,
-.category-card.pos5 {
-  background-color : var(--HIGHLIGHT-3);
-}
-
-.category-card.pos3 {
-  background-color : var(--HIGHLIGHT-1);
-}
-
 .category-card .position {
-  color       : var(--BLACK);
   font-family : 'Gellix';
   font-weight : 600;
   font-size   : 58px;
@@ -39,14 +24,43 @@
   -webkit-box-orient : vertical;
   overflow           : hidden;
   text-overflow      : ellipsis;
-  margin-bottom      : 2px;
-  color              : var(--WHITE);
   font-family        : 'Gellix';
-  font-weight        : 600;
-  font-size          : 18px;
 }
 
-.category-card .count {
+@media (min-width: 600px) {
+  .category-card .position {
+    font-size : 70px;
+  }
+}
+
+/* MOST FREQUENT */
+
+.category-card.most-frequent.pos1,
+.category-card.most-frequent.pos4 {
+  background-color : var(--HIGHLIGHT-2);
+}
+
+.category-card.most-frequent.pos2,
+.category-card.most-frequent.pos5 {
+  background-color : var(--HIGHLIGHT-3);
+}
+
+.category-card.most-frequent.pos3 {
+  background-color : var(--HIGHLIGHT-1);
+}
+
+.category-card.most-frequent .position {
+  color : var(--BLACK);
+}
+
+.category-card.most-frequent .description { 
+  margin-bottom : 2px;
+  color         : var(--WHITE);
+  font-weight   : 600;
+  font-size     : 18px;
+}
+
+.category-card.most-frequent .count {
   color       : var(--BLACK);
   font-family : 'Inter';
   font-weight : 400;
@@ -54,15 +68,54 @@
 }
 
 @media (min-width: 600px) {
-  .category-card .position {
-    font-size : 70px;
-  }
-  
-  .category-card .description  {
+  .category-card.most-frequent .description  {
     font-size : 24px;
   }
-  
-  .category-card .count {
+
+  .category-card.most-frequent .count {
     font-size : 18px;
+  }
+}
+
+/* MOST EXPENSIVE */
+
+.category-card.most-expensive {
+  margin : 10px 0;
+}
+
+.category-card.most-expensive.pos1,
+.category-card.most-expensive.pos3,
+.category-card.most-expensive.pos5 {
+  background-color : var(--PURPLE-3);
+}
+
+.category-card.most-expensive.pos2,
+.category-card.most-expensive.pos4 {
+  background-color : var(--PURPLE-4);
+}
+
+.category-card.most-expensive .position {
+  color : var(--HIGHLIGHT-2);
+}
+
+.category-card.most-expensive .amount {
+  color       : var(--PURPLE-1);
+  font-family : 'Gellix';
+  font-weight : 600;
+  font-size   : 38px;
+}
+
+.category-card.most-expensive .description { 
+  color     : var(--WHITE);
+  font-size : 18px;
+}
+
+@media (min-width: 600px) {
+  .category-card.most-expensive .amount {
+    font-size : 50px;
+  }
+
+  .category-card.most-expensive .description  {
+    font-size : 24px;
   }
 }

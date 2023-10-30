@@ -57,7 +57,7 @@ function MostFrequentCategoriesPage() {
         <div>
           {topCategories.map((category, index) => (
             <Reveal delay={7 + (0.8 - index*0.2)} length={50} key={index} direction={'down'} children={
-              <CategoryCard key={index} category={category} position={index + 1} />
+              <CategoryCard key={index} category={category} position={index + 1} type='most-frequent' />
             } />
           ))}
         </div>
