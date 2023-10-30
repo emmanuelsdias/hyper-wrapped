@@ -1,0 +1,5 @@
+The categories.csv was adapted from the mcc_codes.csv available at:
+https://github.com/greggles/mcc-codes/
+
+The transactions.csv was adapted from the credit_card_transactions-ibm_v2.csv available at:
+https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions/
