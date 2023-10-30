@@ -67,7 +67,7 @@ function MostExpensiveCategoriesPage() {
           index={5}
           total={5}
           prev='/wrapped/daily-average-overview'
-          next=''
+          next='/home'
           />
         } />
     </div>
