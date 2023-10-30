@@ -11,7 +11,6 @@ class TransactionBase(BaseModel):
     time: str
     amount: float
     use_chip: Literal['Swipe Transaction', 'Online Transaction']
-    merchant_name: str
     merchant_city: str
     merchant_state: str
     zip: str

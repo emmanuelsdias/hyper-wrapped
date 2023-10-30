@@ -19,7 +19,6 @@ class Transaction(Base):
     time = Column(String)
     amount = Column(Float)
     use_chip = Column(String)
-    merchant_name = Column(String)
     merchant_city = Column(String)
     merchant_state = Column(String)
     zip = Column(String)
