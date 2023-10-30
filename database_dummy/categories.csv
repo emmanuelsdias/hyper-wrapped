@@ -708,7 +708,7 @@ mcc,general_description,full_description
 4411,Transportation Services,Cruise and Steamship Lines
 4457,Transportation Services,Boat Rentals and Leases
 4468,Transportation Services,"Marinas, Marine Service, and Supplies"
-4511,Transportation Services,"Airlines, Air Carriers ( not listed elsewhere)"
+4511,Transportation Services,"Airlines, Air Carriers (not listed elsewhere)"
 4582,Transportation Services,"Airports, Airport Terminals, Flying Fields"
 4722,Transportation Services,Travel Agencies and Tour Operations
 4723,Transportation Services,Package Tour Operators (For use in Germany only)
@@ -770,7 +770,7 @@ mcc,general_description,full_description
 5531,Retail Outlet Services,Automobile Supply Stores
 5532,Retail Outlet Services,Automotive Tire Stores
 5533,Retail Outlet Services,"Automotive Parts, Accessories Stores"
-5541,Retail Outlet Services,Service Stations ( with or without ancillary services)
+5541,Retail Outlet Services,Service Stations (with or without ancillary services)
 5542,Retail Outlet Services,Automated Fuel Dispensers
 5551,Retail Outlet Services,Boat Dealers
 5561,Retail Outlet Services,"Recreational and Utility Trailers, Camp Dealers"
@@ -861,7 +861,7 @@ mcc,general_description,full_description
 6211,Miscellaneous Stores,Security Brokers/Dealers
 6300,Miscellaneous Stores,"Insurance Sales, Underwriting, and Premiums"
 6381,Miscellaneous Stores,"Insurance Premiums, (no longer valid for first presentment work)"
-6399,Miscellaneous Stores,"Insurance, Not Elsewhere Classified ( no longer valid forfirst presentment work)"
+6399,Miscellaneous Stores,"Insurance, Not Elsewhere Classified (no longer valid forfirst presentment work)"
 6513,Miscellaneous Stores,Real Estate Agents and Managers - Rentals
 7011,Miscellaneous Stores,"Lodging - Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)"
 7012,Miscellaneous Stores,Timeshares
@@ -882,7 +882,7 @@ mcc,general_description,full_description
 7296,Miscellaneous Stores,"Clothing Rental - Costumes, Formal Wear, Uniforms"
 7297,Miscellaneous Stores,Massage Parlors
 7298,Miscellaneous Stores,Health and Beauty Shops
-7299,Miscellaneous Stores,Miscellaneous Personal Services ( not elsewhere classifies)
+7299,Miscellaneous Stores,Miscellaneous Personal Services (not elsewhere classifies)
 7311,Business Services,Advertising Services
 7321,Business Services,Consumer Credit Reporting Agencies
 7332,Business Services,Blueprinting and Photocopying Services
@@ -901,7 +901,7 @@ mcc,general_description,full_description
 7395,Business Services,"Photofinishing Laboratories, Photo Developing"
 7399,Business Services,"Business Services, Not Elsewhere Classified"
 7511,Business Services,Truck Stop
-7512,Business Services,Car Rental Companies ( Not Listed Below)
+7512,Business Services,Car Rental Companies (Not Listed Below)
 7513,Business Services,Truck and Utility Trailer Rentals
 7519,Business Services,Motor Home and Recreational Vehicle Rentals
 7523,Business Services,Automobile Parking Lots and Garages
@@ -957,26 +957,26 @@ mcc,general_description,full_description
 8241,Professional Services and Membership Organizations,Correspondence Schools
 8244,Professional Services and Membership Organizations,Business and Secretarial Schools
 8249,Professional Services and Membership Organizations,Vocational Schools and Trade Schools
-8299,Professional Services and Membership Organizations,Schools and Educational Services ( Not Elsewhere Classified)
+8299,Professional Services and Membership Organizations,Schools and Educational Services (Not Elsewhere Classified)
 8351,Professional Services and Membership Organizations,Child Care Services
 8398,Professional Services and Membership Organizations,Charitable and Social Service Organizations
 8641,Professional Services and Membership Organizations,"Civic, Fraternal, and Social Associations"
 8651,Professional Services and Membership Organizations,Political Organizations
 8661,Professional Services and Membership Organizations,Religious Organizations
 8675,Professional Services and Membership Organizations,Automobile Associations
-8699,Professional Services and Membership Organizations,Membership Organizations ( Not Elsewhere Classified)
-8734,Professional Services and Membership Organizations,Testing Laboratories ( non-medical)
+8699,Professional Services and Membership Organizations,Membership Organizations (Not Elsewhere Classified)
+8734,Professional Services and Membership Organizations,Testing Laboratories (non-medical)
 8911,Professional Services and Membership Organizations,Architectural - Engineering and Surveying Services
 8931,Professional Services and Membership Organizations,"Accounting, Auditing, and Bookkeeping Services"
-8999,Professional Services and Membership Organizations,Professional Services ( Not Elsewhere Defined)
+8999,Professional Services and Membership Organizations,Professional Services (Not Elsewhere Defined)
 9211,Government Services,"Court Costs, including Alimony and Child Support"
 9222,Government Services,Fines
 9223,Government Services,Bail and Bond Payments
 9311,Government Services,Tax Payments
-9399,Government Services,Government Services ( Not Elsewhere Classified)
+9399,Government Services,Government Services (Not Elsewhere Classified)
 9402,Government Services,Postal Services - Government Only
 9405,Government Services,Intra - Government Transactions
-9700,Government Services,Automated Referral Service ( For Visa Only)
-9701,Government Services,Visa Credential Service ( For Visa Only)
-9702,Government Services,GCAS Emergency Services ( For Visa Only)
-9950,Government Services,Intra - Company Purchases ( For Visa Only)
+9700,Government Services,Automated Referral Service (For Visa Only)
+9701,Government Services,Visa Credential Service (For Visa Only)
+9702,Government Services,GCAS Emergency Services (For Visa Only)
+9950,Government Services,Intra - Company Purchases (For Visa Only)
