@@ -6,6 +6,12 @@ This was a project developed for an internship interview. The project involved c
 
 Once the frontend and backend are running, you should be able to login using one of the following usernames: `chico`, `alanturing`, `johnmcc`, `mminsky` or `konzuse`. The password field wasn't implemented and the register option isn't available, since it didn't make sense for the project.
 
+## demo
+
+<div align="center">
+  <video src=https://github.com/emmanuelsdias/hyper-wrapped/assets/62708624/3aff9441-d777-4f9e-be3e-f75b141adbee width="400" />
+</div>
+
 ## backend
 
 The backend was developed using FastAPI. Its main function is to enable login, communicate with the database and, through the use of queries, provide stats and trends for the frontend's wrapped section.
