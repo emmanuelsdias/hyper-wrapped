@@ -9,7 +9,7 @@ Once the frontend and backend are running, you should be able to login using one
 ## demo
 
 <div align="center">
-  <video src=https://github.com/emmanuelsdias/hyper-wrapped/assets/62708624/3aff9441-d777-4f9e-be3e-f75b141adbee width="400" />
+  <video src=https://github.com/emmanuelsdias/hyper-wrapped/assets/62708624/20663a32-5a74-45c9-ba35-8b4693d3d30e width="400" />
 </div>
 
 ## backend
@@ -23,6 +23,7 @@ To make the backend work correctly, you first need to link it to your PostgreSQL
 Next, to run the backend app, you need to have Python installed. Once inside the `backend` folder, create and activate your Python environment. Then, run `make install` to install all needed dependencies and `make start` to run the app.
 
 Once you run the backend app for the first time, it should create the PostgreSQL tables and relations according to the implemented models. However, all the tables should be empty for now. To populate them, use a PostgreSQL management tool (such as pgAdmin) or command line to import the mock data provided in `database_dummy`. Note that the `transaction_id` field in `transactions` is not supposed to be among the columns to import and should be created automatically. 
+
 
 ### structure
 
