@@ -28,11 +28,7 @@ function MonthlyOverviewPage() {
   const [monthlyData, setMonthlyData] = useState([]);
   const [maxMonth, setMaxMonth] = useState('');
   const [minMonth, setMinMonth] = useState('');
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
-
+  
   useEffect(() => {
     const fetchMonthlyData = async () => {
       try {
@@ -42,7 +38,7 @@ function MonthlyOverviewPage() {
 
         const maxIndex = dataArray.indexOf(Math.max(...dataArray));
         setMaxMonth(months[maxIndex]);
-
+        
         const minIndex = dataArray.indexOf(Math.min(...dataArray));
         setMinMonth(months[minIndex]);
 
@@ -51,8 +47,14 @@ function MonthlyOverviewPage() {
         console.error('Error fetching monthly data:', error);
       }
     };
-    fetchMonthlyData();
+    if (isLogged) {
+      fetchMonthlyData();
+    }
   }, []);
+  
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className='wrapped-page' id='monthly-overview-page'>

@@ -22,11 +22,7 @@ function MostExpensiveCategoriesPage() {
   const userId = useSelector((state) => state.userId);
 
   const [topCategories, setTopCategories] = useState([]);
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
-
+  
   useEffect(() => {
     const fetchMostExpensiveCategories = async () => {
       try {
@@ -36,8 +32,14 @@ function MostExpensiveCategoriesPage() {
         console.error('Error fetching most expensive categories data:', error);
       }
     };
-    fetchMostExpensiveCategories();
+    if (isLogged) {
+      fetchMostExpensiveCategories();
+    }
   }, []);
+  
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className='wrapped-page' id='most-expensive-categories-page'>

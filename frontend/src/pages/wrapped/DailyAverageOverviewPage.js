@@ -28,10 +28,6 @@ function DailyAverageOverviewPage() {
   const [dailyData, setDailyData] = useState([]);
   const [maxDay, setMaxDay] = useState('');
   const [minDay, setMinDay] = useState('');
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
   
   useEffect(() => {
     const fetchDailyData = async () => {
@@ -39,7 +35,7 @@ function DailyAverageOverviewPage() {
         const data = await getDailyAverageOverview(userId, currentYear);
         const dataDict = data.daily_summary;
         const dataArray = Object.values(dataDict);
-
+        
         const maxIndex = dataArray.indexOf(Math.max(...dataArray));
         setMaxDay(days[maxIndex]);
 
@@ -51,8 +47,14 @@ function DailyAverageOverviewPage() {
         console.error('Error fetching daily data:', error);
       }
     };
-    fetchDailyData();
+    if (isLogged) {
+      fetchDailyData();
+    }
   }, []);
+  
+    if (!isLogged) {
+      return <Navigate to="/" />;
+    }
 
   return (
     <div className='wrapped-page' id='daily-average-overview-page'>

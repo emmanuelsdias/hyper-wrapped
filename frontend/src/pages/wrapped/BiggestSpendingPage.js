@@ -30,10 +30,6 @@ function BiggestSpendingPage() {
   const [amount, setAmount] = useState('');
   const [description, setDescription] = useState('');
   
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
-
   useEffect(() => {
     const fetchBiggestSpendingData = async () => {
       try {
@@ -46,8 +42,14 @@ function BiggestSpendingPage() {
         console.error('Error fetching biggest spending data:', error);
       }
     };
-    fetchBiggestSpendingData();
+    if (isLogged) {
+      fetchBiggestSpendingData();
+    }
   }, []);
+
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className='wrapped-page' id='biggest-spending-page'>

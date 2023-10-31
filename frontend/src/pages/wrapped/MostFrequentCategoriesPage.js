@@ -22,11 +22,7 @@ function MostFrequentCategoriesPage() {
   const userId = useSelector((state) => state.userId);
 
   const [topCategories, setTopCategories] = useState([]);
-
-  if (!isLogged) {
-    return <Navigate to="/" />;
-  }
-
+  
   useEffect(() => {
     const fetchMostFrequentCategories = async () => {
       try {
@@ -36,8 +32,14 @@ function MostFrequentCategoriesPage() {
         console.error('Error fetching most frequent categories data:', error);
       }
     };
-    fetchMostFrequentCategories();
+    if (isLogged) {
+      fetchMostFrequentCategories();
+    }
   }, []);
+  
+  if (!isLogged) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className='wrapped-page' id='most-frequent-categories-page'>
