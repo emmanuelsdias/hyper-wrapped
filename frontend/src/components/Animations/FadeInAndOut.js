@@ -9,19 +9,19 @@ function FadeInAndOut({ children, delay = 0, waitBetween = 1, duration = 0.5, ex
   // duration: duration of the animations of fadeIn and fadeOut
   // expand: whether the animation should expand to the parent's width
   return (
-    <FadeOut 
-      delay={delay + duration + waitBetween} 
-      duration={duration} 
-      expand={expand} 
-      children={
-      <FadeIn 
-        delay={delay} 
-        duration={duration} 
-        expand={expand} 
-        children={
-        children
-      } />
-    } />
+    <FadeOut
+      delay={delay + duration + waitBetween}
+      duration={duration}
+      expand={expand}
+    >
+      <FadeIn
+        delay={delay}
+        duration={duration}
+        expand={expand}
+      >
+        {children}
+      </FadeIn>
+    </FadeOut>
   );
 };
 

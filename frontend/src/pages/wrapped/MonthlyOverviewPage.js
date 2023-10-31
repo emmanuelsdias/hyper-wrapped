@@ -28,7 +28,7 @@ function MonthlyOverviewPage() {
   const [monthlyData, setMonthlyData] = useState([]);
   const [maxMonth, setMaxMonth] = useState('');
   const [minMonth, setMinMonth] = useState('');
-  
+
   useEffect(() => {
     const fetchMonthlyData = async () => {
       try {
@@ -38,7 +38,7 @@ function MonthlyOverviewPage() {
 
         const maxIndex = dataArray.indexOf(Math.max(...dataArray));
         setMaxMonth(months[maxIndex]);
-        
+
         const minIndex = dataArray.indexOf(Math.min(...dataArray));
         setMinMonth(months[minIndex]);
 
@@ -51,44 +51,44 @@ function MonthlyOverviewPage() {
       fetchMonthlyData();
     }
   }, []);
-  
+
   if (!isLogged) {
     return <Navigate to="/" />;
   }
 
   return (
     <div className='wrapped-page' id='monthly-overview-page'>
-      <Slide delay={7.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
+      <Slide delay={7.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1}>
         <Logo noWordmark={true} />
-      } />
-      <Reveal delay={8} length={20} direction={'right'} children={
+      </Slide>
+      <Reveal delay={8} length={20} direction={'right'}>
         <span className='title'>Monthly Spendings</span>
-      } />
+      </Reveal>
       <div className='wrapped-container'>
-        <FadeInAndOut waitBetween={2} children={
+        <FadeInAndOut waitBetween={2}>
           <p>We all had our <span className='maximum'>highs</span> and <span className='minimum'>lows</span> throught the year...</p>
-        } />
+        </FadeInAndOut>
         <div>
-          <FadeInAndOut delay={3} waitBetween={4} children={
+          <FadeInAndOut delay={3} waitBetween={4}>
             <p>The month you spent the most was <span className='maximum'>{maxMonth}</span>.</p>
-          } />
+          </FadeInAndOut>
           <br />
-          <FadeInAndOut delay={5} waitBetween={2} children={
+          <FadeInAndOut delay={5} waitBetween={2}>
             <p>The month you spent the least was <span className='minimum'>{minMonth}</span>.</p>
-          } />
+          </FadeInAndOut>
         </div>
-        <FadeIn delay={8} expand={true} children={
+        <FadeIn delay={8} expand={true}>
           <BarChart xLabel={monthsInitials} delay={8} height={Math.min(height - 150, 300)} data={monthlyData} />
-        } />
+        </FadeIn>
       </div>
-      <FadeIn delay={8} duration={1} min_opacity={0.2} children={
+      <FadeIn delay={8} duration={1} min_opacity={0.2}>
         <Pagination
           index={3}
           total={5}
           prev='/wrapped/most-frequent-categories'
           next='/wrapped/daily-average-overview'
         />
-      } />
+      </FadeIn>
     </div>
   );
 }

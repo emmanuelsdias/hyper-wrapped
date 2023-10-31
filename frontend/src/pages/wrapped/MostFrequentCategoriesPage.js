@@ -22,7 +22,7 @@ function MostFrequentCategoriesPage() {
   const userId = useSelector((state) => state.userId);
 
   const [topCategories, setTopCategories] = useState([]);
-  
+
   useEffect(() => {
     const fetchMostFrequentCategories = async () => {
       try {
@@ -36,42 +36,42 @@ function MostFrequentCategoriesPage() {
       fetchMostFrequentCategories();
     }
   }, []);
-  
+
   if (!isLogged) {
     return <Navigate to="/" />;
   }
 
   return (
     <div className='wrapped-page' id='most-frequent-categories-page'>
-      <Slide delay={6.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1} children={
+      <Slide delay={6.5} length={Math.min(width / 2, 500) - 40} direction='left' duration={1}>
         <Logo noWordmark={true} />
-      } />
-      <Reveal delay={7} length={20} direction={'right'} children={
+      </Slide>
+      <Reveal delay={7} length={20} direction={'right'}>
         <span className='title'>Most Frequent Categories</span>
-      } />
+      </Reveal>
       <div className='wrapped-container'>
-        <FadeInAndOut waitBetween={3} children={
+        <FadeInAndOut waitBetween={3}>
           <p><span className='pos1'>1</span>, <span className='pos2'>2</span>, <span className='pos3'>3</span>... There were some purchases you couldn't stop making!</p>
-        } />
-        <FadeInAndOut delay={4} waitBetween={2} children={
+        </FadeInAndOut>
+        <FadeInAndOut delay={4} waitBetween={2}>
           <p>Here are your <span className='attention'>top recurring</span> categories.</p>
-        } />
+        </FadeInAndOut>
         <div>
           {topCategories.map((category, index) => (
-            <Reveal delay={7 + (0.8 - index*0.2)} length={50} key={index} direction={'down'} children={
+            <Reveal delay={7 + (0.8 - index * 0.2)} length={50} key={index} direction={'down'}>
               <CategoryCard key={index} category={category} position={index + 1} type='most-frequent' />
-            } />
+            </Reveal>
           ))}
         </div>
       </div>
-      <FadeIn delay={7} duration={1} min_opacity={0.2} children={
+      <FadeIn delay={7} duration={1} min_opacity={0.2}>
         <Pagination
           index={2}
           total={5}
           prev='/wrapped/biggest-spending'
           next='/wrapped/monthly-overview'
         />
-      } />
+      </FadeIn>
     </div>
   );
 }

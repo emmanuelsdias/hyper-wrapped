@@ -32,22 +32,22 @@ function HomePage() {
       <div id='home-page'>
         <Logo />
         <div className='text-container'>
-          <Reveal delay={0} children={
+          <Reveal delay={0}>
             <p>hello {name}, this is</p>
-          } />
-          <Reveal delay={0.5} children={
+          </Reveal>
+          <Reveal delay={0.5}>
             <p className='attention'>hyper wrapped:</p>
-          } />
-          <Reveal delay={1.0} children={
+          </Reveal>
+          <Reveal delay={1.0}>
             <p>your year in review!</p>
-          } />
+          </Reveal>
         </div>
         <Link className='button-container' to="/wrapped">
-          <FadeIn delay={1.5} duration={1} children={
+          <FadeIn delay={1.5} duration={1}>
             <button>
               check my year
             </button>
-          } />
+          </FadeIn>
         </Link>
       </div>
     );
